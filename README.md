@@ -33,7 +33,7 @@ before_install:
   - curl http://rawgit.com/twolfson/fix-travis-ci/master/lib/fix-travis-ci.bash | bash -s
 ```
 
-Upon your next push, Travis CI should work with `npm@2.x.x` and forever.
+Upon your next push, Travis CI should work with `npm@2.x.x` and handle future issues.
 
 ## FAQs
 ### Why are you using Python? Why not node.js?
