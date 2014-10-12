@@ -8,9 +8,5 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Install test dependencies
-  config.vm.provision "shell", inline: $install_test_deps
-
-  # Install `n`, `node@0.8`, and `node@0.10`
-  $install_node_version = <<SCRIPT
-      sudo npm install -g n
+  config.vm.provision "shell", path: "test/install.sh"
 end

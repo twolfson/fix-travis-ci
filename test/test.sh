@@ -3,4 +3,5 @@
 set -e
 set -x
 
+# Run our test command
 echo "hai"
