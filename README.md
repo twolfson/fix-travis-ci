@@ -26,15 +26,14 @@ Proposed solution: Use a hotlinked script for all repos
 Bad idea? Probably. But we will make sure to make it transparent during execution for reproducability.
 
 ## Getting Started
-Install the module with: `npm install fix-travis-ci`
+In your `.travis.yml`, add in
 
-```js
-var fix_travis_ci = require('fix-travis-ci');
-fix_travis_ci.awesome(); // "awesome"
+```yaml
+before_install:
+  - curl http://rawgit.com/twolfson/fix-travis-ci/master/lib/fix-travis-ci.bash | bash -s
 ```
 
-## Documentation
-_(Coming soon)_
+Upon your next push, Travis CI should work with `npm@2.x.x` and forever.
 
 ## FAQs
 ### Why are you using Python? Why not node.js?
