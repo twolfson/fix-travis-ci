@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+# Output commands and exit on first failure
+set -e
+set -x
+
 # Install `node` for testing
 if ! which node > /dev/null; then
   sudo apt-get install -y node
