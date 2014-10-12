@@ -36,8 +36,14 @@ fix_travis_ci.awesome(); // "awesome"
 ## Documentation
 _(Coming soon)_
 
-## Examples
-_(Coming soon)_
+## FAQs
+### Why are you using Python? Why not node.js?
+Python has built in `yaml` support. I didn't want to have to deal with installing dependencies.
+
+### Do you plan on supporting more languages?
+I am open to it. We already do `.travis.yml` and environment sniffing. Open an issue to discuss it.
+
+https://github.com/twolfson/fix-travis-ci/issues/new
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
