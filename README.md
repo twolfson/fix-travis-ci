@@ -45,7 +45,7 @@ I am open to it. We already do `.travis.yml` and environment sniffing. Open an i
 https://github.com/twolfson/fix-travis-ci/issues/new
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
 
 ## Donating
 Support this project and [others by twolfson][gratipay] via [gratipay][].
