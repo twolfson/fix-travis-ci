@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Echo outputs and exit on first error
 set -e
 set -x
