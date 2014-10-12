@@ -4,7 +4,7 @@ Repair annoying repetitive issues with Travis CI
 
 This was created out of frustration with Travis CI for its poor handling of `npm` updates with respect to `node@0.8`
 
-**tl;dr**
+## lol, wut? Why?
 `npm` introduced caret notation, requiring `npm` upgrades to install package `dependencies` that use this notation
 
 ```yaml
