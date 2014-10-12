@@ -2,6 +2,29 @@
 
 Repair annoying repetitive issues with Travis CI
 
+This was created out of frustration with Travis CI for its poor handling of `npm` updates with respect to `node@0.8`
+
+**tl;dr**
+`npm` introduced caret notation, requiring `npm` upgrades to install package `dependencies` that use this notation
+
+```yaml
+before_install:
+  - npm install npm@latest -g
+```
+
+`npm` releases `2.0.0` cannot upgrade itself because it now uses caret notation. Thus, voiding the last command
+
+```yaml
+before_install:
+  - npm install npm@1.x.x -g
+```
+
+But this doesn't allow for upgrading to get `npm>1.x.x` features in the future. Right, and what about more future problems?
+
+Proposed solution: Use a hotlinked script for all repos
+
+Bad idea? Probably. But we will make sure to make it transparent during execution for reproducability.
+
 ## Getting Started
 Install the module with: `npm install fix-travis-ci`
 
