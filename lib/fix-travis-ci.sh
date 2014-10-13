@@ -6,3 +6,6 @@ set -x
 # Determine if we are in `node@0.8`
 # TODO: cat into python via a docblock
 # TODO: Start testing via Vagrant so we don't affect the host environment
+
+# TODO: Find `language`, look for `lib/fixes/{{language}}.sh`
+#   If it exists, run it. Inside of `lib/fixes/node.sh`, implement `npm` adjustments
