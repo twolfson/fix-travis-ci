@@ -4,9 +4,10 @@ set -e
 set -x
 
 # Determine if we are in `node@0.8`
-# TODO: Start testing via Vagrant so we don't affect the host environment
-# TODO: Figure out why Vagrant
-# TODO:
+# TODO: Figure out why Vagrant's python lacks yaml module
+# TODO: Stop using brittle greps
+language="$(grep "language" .travis.yml | sed -e "s/language:\\s*//")"
+echo $language
 # python - <<EOF
 # # Load in dependencies
 # import yaml
