@@ -3,18 +3,17 @@
 set -e
 set -x
 
-# Determine if we are in `node@0.8`
+# Retrieve the language
 # TODO: Figure out why Vagrant's python lacks yaml module
 # TODO: Stop using brittle greps
 language="$(grep "language" .travis.yml | sed -e "s/language:\\s*//")"
-echo $language
 # python - <<EOF
-# # Load in dependencies
 # import yaml
-
-# # Start our script
-# print 'hello world'
 # EOF
 
-# TODO: Find `language`, look for `lib/fixes/{{language}}.sh`
-#   If it exists, run it. Inside of `lib/fixes/node.sh`, implement `npm` adjustments
+# If there is a fix for the language, run it
+# e.g. lib/fixes/node.sh exists, run it
+language_fix="fixes/$language.sh"
+if test -x "$language_fix"; then
+  "$language_fix"
+fi
