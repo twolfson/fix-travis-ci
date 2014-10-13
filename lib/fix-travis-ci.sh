@@ -17,8 +17,6 @@ language="$(grep "language" .travis.yml | sed -e "s/language:\\s*//")"
 # If there is a fix for the language, run it
 # e.g. lib/fixes/node.sh exists, run it
 language_fix="$DIR/fixes/$language.sh"
-echo "$language_fix"
-echo "$PWD"
 if test -x "$language_fix"; then
   "$language_fix"
 fi
