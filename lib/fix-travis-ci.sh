@@ -7,7 +7,12 @@ set -x
 # TODO: cat into python via a docblock
 # TODO: Start testing via Vagrant so we don't affect the host environment
 cat | python - <<EOF
-  print 'hello world'
+# Load in dependencies
+import sys
+
+# Start our script
+print 'hello world'
+sys.exit()
 EOF
 
 # TODO: Find `language`, look for `lib/fixes/{{language}}.sh`
