@@ -13,6 +13,8 @@ import sys
 # Start our script
 print 'hello world'
 sys.exit()
+
+
 EOF
 
 # TODO: Find `language`, look for `lib/fixes/{{language}}.sh`
