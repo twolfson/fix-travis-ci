@@ -7,5 +7,10 @@ set -x
 # DEV: `caret` notation is supported by `1.4.3` but `npm` didn't start using it until 2.x.x
 npm_version="$(npm --version)"
 if echo "$npm_version" | grep "^[01]\." > /dev/null; then
-  echo "yep, 1.x"
+  # TODO: Need to be connected to internet for this to work =(
+  npm install npm@1.x.x --global
 fi
+
+# Upgrade to latest `npm`
+npm install npm@latest --global
+# TODO: We might need to output version
