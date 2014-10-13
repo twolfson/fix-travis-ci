@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# If we aren't in a Vagrant or Travis CI environment, complain and leave
+if test "$VAGRANT" != "true" && test "$TRAVIS" != "true"; then
+  echo "Tests must be run in enclosed environment (e.g. Vagrant, Travis) to prevent accidental publishes" 1>&2
+  exit 1
+fi
+
 # Exit on first failure
 set -e
 
