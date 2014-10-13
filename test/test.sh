@@ -34,7 +34,7 @@ root_dir="$PWD"
 
 # In a `node@0.8` environment
 sudo n 0.8.28
-cd "$root_dir/test/test-files/node.travis.yml"
+cd "$root_dir/test/test-files/node_js.travis.yml"
 
   # BEFORE: Save original npm version
   npm_version="$(npm --version)"
