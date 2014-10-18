@@ -39,6 +39,22 @@ I am open to it. We already use `language` from `.travis.yml` and environment sn
 
 https://github.com/twolfson/fix-travis-ci/issues/new
 
+## Testing
+For running our tests, we use [Vagrant][] to match the [Travis CI][] environment as closely as possible.
+
+```bash
+# Provision and SSH into our Vagrant box
+vagrant up
+vagrant ssh
+
+# Navigate to the repo and run our tests
+cd /vagrant
+test/test.sh
+```
+
+[Vagrant]: http://www.vagrantup.com/
+[Travis CI]: http://travis-ci.org/
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
 
