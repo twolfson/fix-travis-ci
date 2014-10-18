@@ -13,6 +13,5 @@ fi
 
 # Upgrade to latest `npm`
 sudo npm install npm@latest --global
-# TODO: We might need to output version
 
 # TODO: Semi-related, how do we `rsync` into a Vagrant box?
