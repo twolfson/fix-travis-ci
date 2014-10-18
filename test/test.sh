@@ -40,7 +40,7 @@ cd "$root_dir/test/test-files/node_js.travis.yml"
   npm_version="$(npm --version)"
 
   # when `fix-travis-ci` runs
-  "$root_dir/lib/fix-travis-ci.sh"
+  sudo "$root_dir/lib/fix-travis-ci.sh"
 
     # it upgrades `npm` to the latest one
     assert_not_equal "$(npm --version)" "$npm_version" '`fix-travis-ci` did not upgrade `npm` in a `node@0.8` environment'
@@ -53,7 +53,7 @@ cd "$root_dir/test/test-files/bash.travis.yml"
   npm_version="$(npm --version)"
 
   # when `fix-travis-ci` runs
-  "$root_dir/lib/fix-travis-ci.sh"
+  sudo "$root_dir/lib/fix-travis-ci.sh"
 
     # it doesn't touch `npm`
     assert_equal "$(npm --version)" "$npm_version" '`fix-travis-ci` upgraded `npm` in a non-node environment'
