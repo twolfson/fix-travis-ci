@@ -4,7 +4,7 @@ Repair annoying repetitive issues with Travis CI
 
 This was created out of frustration with Travis CI for its poor handling of `npm` updates with respect to `node@0.8`
 
-## lol, wut? Why?
+## Explanation
 `npm` introduced caret notation, requiring `npm` upgrades to install package `dependencies` that use this notation
 
 ```yaml
@@ -21,9 +21,7 @@ before_install:
 
 But this doesn't allow for upgrading to get `npm>1.x.x` features in the future. Right, and what about more future problems?
 
-Proposed solution: Use a hotlinked script for all repos
-
-Bad idea? Probably. But we will make sure to make it transparent during execution for reproducability.
+Proposed solution: Use a hotlinked script for all repos that is transparent during execution for reproducability.
 
 ## Getting Started
 In your `.travis.yml`, add in
@@ -33,14 +31,11 @@ before_install:
   - curl http://rawgit.com/twolfson/fix-travis-ci/master/lib/fix-travis-ci.bash | bash -s
 ```
 
-Upon your next push, Travis CI should work with `npm@2.x.x` and handle future issues.
+Upon your next push, Travis CI should work with `npm@latest` and handle future issues.
 
 ## FAQs
-### Why are you using Python? Why not node.js?
-Python has built in `yaml` support. I didn't want to have to deal with installing dependencies.
-
 ### Do you plan on supporting more languages?
-I am open to it. We already do `.travis.yml` and environment sniffing. Open an issue to discuss it.
+I am open to it. We already use `language` from `.travis.yml` and environment sniffing. Open an issue to discuss it.
 
 https://github.com/twolfson/fix-travis-ci/issues/new
 
