@@ -10,6 +10,7 @@ if ! test -f .updated_apt_get; then
 fi
 
 # Install `node` for testing
+which node
 if ! which node > /dev/null; then
   sudo apt-get install -y python-software-properties python g++ make
   sudo add-apt-repository -y ppa:chris-lea/node.js
