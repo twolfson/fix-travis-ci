@@ -28,7 +28,7 @@ In your `.travis.yml`, add in
 
 ```yaml
 before_install:
-  - curl http://rawgit.com/twolfson/fix-travis-ci/master/lib/fix-travis-ci.bash | bash -s
+  - git clone https://github.com/twolfson/fix-travis-ci --depth 1 && cd fix-travis-ci && git rev-parse HEAD && lib/fix-travis-ci.sh
 ```
 
 Upon your next push, Travis CI should work with `npm@latest` and handle future issues.
