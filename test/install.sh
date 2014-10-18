@@ -19,7 +19,7 @@ fi
 
 # Install `n`, `node@0.8`, and `node@0.10`
 if ! which n > /dev/null; then
-  npm install -g n
-  n 0.8.28
-  n 0.10.32
+  sudo npm install -g n
+  sudo n 0.8.28
+  sudo n 0.10.32
 fi
