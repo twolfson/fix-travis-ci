@@ -1,9 +1,12 @@
 language: bash
 
 install:
+  # Uninstall `nvm` and install dependencies
+  - rm -rf ~/.nvm ~/.npm ~/.bower
   - test/install.sh
 
 script:
+  # Run our test script
   - test/test.sh
 
 notifications:
