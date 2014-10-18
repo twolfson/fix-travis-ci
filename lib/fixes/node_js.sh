@@ -8,11 +8,11 @@ set -x
 npm_version="$(npm --version)"
 if echo "$npm_version" | grep "^[01]\." > /dev/null; then
   # TODO: Need to be connected to internet for this to work =(
-  npm install npm@1.x.x --global
+  sudo npm install npm@1.x.x --global
 fi
 
 # Upgrade to latest `npm`
-npm install npm@latest --global
+sudo npm install npm@latest --global
 # TODO: We might need to output version
 
 # TODO: Semi-related, how do we `rsync` into a Vagrant box?
