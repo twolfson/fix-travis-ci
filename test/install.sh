@@ -5,7 +5,7 @@ set -x
 
 # Update apt-get once
 if ! test -f .updated_apt_get; then
-  apt-get update
+  sudo apt-get update
   touch .updated_apt_get
 fi
 
