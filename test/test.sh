@@ -47,7 +47,7 @@ cd "$root_dir/test/test-files/node_js.travis.yml"
 
 # In a non-node environment
 sudo n 0.10.32
-cd "$root_dir/test/test-files/node.travis.yml"
+cd "$root_dir/test/test-files/node_js.travis.yml"
 
   # Save original npm version
   npm_version="$(npm --version)"
