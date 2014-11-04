@@ -33,6 +33,14 @@ before_install:
 
 Upon your next push, Travis CI should work with `npm@latest` and handle future issues.
 
+### Short URL
+If you prefer a shortened URL, the below example will work as well:
+
+```yaml
+before_install:
+  - curl --location http://git.io/1OcIZA | bash -s
+```
+
 ## FAQs
 ### Do you plan on supporting more languages?
 I am open to it. We already use `language` from `.travis.yml` and environment sniffing. Open an issue to discuss it.
